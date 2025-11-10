@@ -616,8 +616,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed rgba(99, 102, 241, 0.3);
+    border: 2px solid rgba(99, 102, 241, 0.1);
     transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
 .image-placeholder:hover {
@@ -627,6 +629,13 @@ section {
 
 .image-placeholder svg {
     opacity: 0.6;
+}
+
+.image-placeholder .service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 /* Expertise Section */
