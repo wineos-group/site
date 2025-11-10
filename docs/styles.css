@@ -37,7 +37,7 @@ body {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 section {
@@ -416,7 +416,7 @@ section {
 /* Section Header */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -466,7 +466,7 @@ section {
 .about-text {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.8;
 }
 
@@ -516,7 +516,7 @@ section {
 
 .visual-card {
     background: var(--dark-bg);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 20px;
     border: 1px solid rgba(0, 212, 255, 0.1);
     transition: all 0.3s ease;
@@ -561,6 +561,72 @@ section {
 
 .visual-card p {
     color: var(--text-secondary);
+}
+
+/* Service Center Section */
+.service-center {
+    background: var(--dark-bg);
+}
+
+.service-content-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.service-content-block:last-child {
+    margin-bottom: 0;
+}
+
+.service-content-block.reverse {
+    direction: rtl;
+}
+
+.service-content-block.reverse > * {
+    direction: ltr;
+}
+
+.service-text h3 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.service-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 400px;
+    background: var(--dark-secondary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+}
+
+.image-placeholder svg {
+    opacity: 0.6;
 }
 
 /* Expertise Section */
@@ -614,7 +680,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -817,6 +883,9 @@ section {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sector-card::before {
@@ -850,6 +919,10 @@ section {
 
 .sector-card:hover .sector-icon {
     transform: scale(1.2) rotate(5deg);
+}
+
+.sector-card .card-icon-wrapper {
+    margin-bottom: 1.5rem;
 }
 
 .sector-card h3 {
@@ -903,13 +976,13 @@ section {
 
 .offer-card > p {
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     line-height: 1.6;
 }
 
 .offer-list {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .offer-list li {
@@ -1262,9 +1335,18 @@ section {
 
     .about-grid,
     .contact-content,
-    .footer-content {
+    .footer-content,
+    .service-content-block {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .service-content-block.reverse {
+        direction: ltr;
+    }
+
+    .image-placeholder {
+        height: 300px;
     }
 
     .stats-grid {
